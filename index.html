@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>to_my_love</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verses for Her</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            background-color: #fff1f2; /* Fallback */
+            background-image: radial-gradient(#fda4af 1px, transparent 1px);
+            background-size: 40px 40px;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, .handwritten {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .sans-serif {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        /* Floating Hearts Animation */
+        .floating-heart {
+            position: absolute;
+            color: rgba(244, 63, 94, 0.2);
+            animation: float 15s infinite linear;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Card Hover Effect */
+        .poem-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .poem-card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Button Pulse */
+        .pulse-btn {
+            animation: pulse-soft 2s infinite;
+        }
+        @keyframes pulse-soft {
+            0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(244, 63, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 relative">
+
+    <!-- Background Elements -->
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none overflow-hidden"></div>
+
+    <!-- Header -->
+    <header class="text-center pt-16 pb-12 px-4">
+        <div class="inline-block relative">
+            <h1 class="text-5xl md:text-7xl text-rose-500 mb-2 relative z-10">To My Love</h1>
+            <div class="absolute -bottom-2 -right-4 text-3xl transform rotate-12">❤️</div>
+        </div>
+        <p class="sans-serif text-slate-500 mt-4 text-lg font-semibold tracking-wide">A COLLECTION OF MOMENTS & THOUGHTS</p>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-6xl mx-auto px-4 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Poem 1 -->
+            <div class="poem-card bg-white p-8 rounded-2xl shadow-lg border-b-4 border-rose-200">
+                <h2 class="text-3xl text-rose-400 mb-4">Morning Coffee</h2>
+                <p class="text-lg leading-relaxed italic text-slate-600">
+                    The sun isn't up until you are.<br>
+                    The coffee is bitter,<br>
+                    until your smile sweetens the room.<br>
+                    My day doesn't start with an alarm,<br>
+                    it starts with the quiet sound<br>
+                    of your breathing beside me.
+                </p>
+            </div>
+
+            <!-- Poem 2 -->
+            <div class="poem-card bg-white p-8 rounded-2xl shadow-lg border-b-4 border-indigo-200 md:mt-12">
+                <h2 class="text-3xl text-indigo-400 mb-4">The Map</h2>
+                <p class="text-lg leading-relaxed italic text-slate-600">
+                    I used to look at maps<br>
+                    and wonder where I’d go.<br>
+                    Now I look at the lines<br>
+                    on your palms,<br>
+                    and realize I have already arrived.<br>
+                    You are my favorite destination.
+                </p>
+            </div>
+
+            <!-- Poem 3 -->
+            <div class="poem-card bg-white p-8 rounded-2xl shadow-lg border-b-4 border-amber-200">
+                <h2 class="text-3xl text-amber-400 mb-4">Stolen Hoodies</h2>
+                <p class="text-lg leading-relaxed italic text-slate-600">
+                    It's three sizes too big.<br>
+                    The sleeves cover your hands,<br>
+                    and you look ridiculous.<br>
+                    <br>
+                    But when you wear my clothes,<br>
+                    wrapped in grey cotton,<br>
+                    you look like home.
+                </p>
+            </div>
+
+            <!-- Poem 4 -->
+            <div class="poem-card bg-white p-8 rounded-2xl shadow-lg border-b-4 border-emerald-200 md:mt-8">
+                <h2 class="text-3xl text-emerald-400 mb-4">Gravity</h2>
+                <p class="text-lg leading-relaxed italic text-slate-600">
+                    Science says gravity<br>
+                    keeps the planets aligned.<br>
+                    Keeps the moon close.<br>
+                    <br>
+                    I don't know about physics,<br>
+                    but I know that whenever<br>
+                    you walk into a room,<br>
+                    my entire world tilts toward you.
+                </p>
+            </div>
+
+            <!-- Poem 5 -->
+            <div class="poem-card bg-white p-8 rounded-2xl shadow-lg border-b-4 border-rose-200 lg:mt-16">
+                <h2 class="text-3xl text-rose-400 mb-4">Sunday</h2>
+                <p class="text-lg leading-relaxed italic text-slate-600">
+                    Doing nothing with you<br>
+                    means everything to me.<br>
+                    Grocery stores,<br>
+                    traffic jams,<br>
+                    rainy afternoons.<br>
+                    <br>
+                    You turn the mundane<br>
+                    into magic.
+                </p>
+            </div>
+
+            <!-- Interactive Section -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-3 mt-12 text-center">
+                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl max-w-2xl mx-auto border-2 border-rose-100">
+                    <h2 class="text-4xl text-slate-700 mb-2">Need a Reminder?</h2>
+                    <p class="sans-serif text-slate-500 mb-6">Click the button for a quick love note.</p>
+                    
+                    <div id="note-display" class="h-24 flex items-center justify-center mb-6">
+                        <p class="text-xl font-medium text-rose-600 transition-all duration-300" id="note-text">You are my favorite person.</p>
+                    </div>
+
+                    <button onclick="generateNote()" class="pulse-btn bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:scale-105 sans-serif focus:outline-none focus:ring-2 focus:ring-rose-400 focus:ring-opacity-50">
+                        Tell Me Something Sweet
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center pb-8 text-slate-400 sans-serif text-sm">
+        <p>&copy; The one who loves you most.</p>
+    </footer>
+
+    <script>
+        // Floating Hearts Generator
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            const heartCount = 15;
+            const colors = ['#f43f5e', '#fb7185', '#fda4af']; // Different shades of pink/red
+
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('floating-heart');
+                heart.innerHTML = '❤';
+                
+                // Randomize properties
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                heart.style.animationDelay = (Math.random() * 10) + 's';
+                heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                
+                container.appendChild(heart);
+            }
+        }
+
+        // Love Note Generator
+        const notes = [
+            "You look beautiful today.",
+            "I'm so lucky to know you.",
+            "Thank you for being you.",
+            "Thinking of you makes me smile.",
+            "You make my heart skip a beat.",
+            "I love your laugh.",
+            "Let's get tacos later.",
+            "You are my happy place.",
+            "My life is better with you in it.",
+            "I love you more than pizza (maybe)."
+        ];
+
+        function generateNote() {
+            const display = document.getElementById('note-text');
+            const btn = document.querySelector('button');
+            
+            // Simple fade out/in effect
+            display.style.opacity = '0';
+            display.style.transform = 'translateY(10px)';
+            
+            setTimeout(() => {
+                const randomNote = notes[Math.floor(Math.random() * notes.length)];
+                display.innerText = randomNote;
+                display.style.opacity = '1';
+                display.style.transform = 'translateY(0)';
+            }, 300);
+            
+            // Button reaction
+            btn.classList.remove('pulse-btn');
+            void btn.offsetWidth; // trigger reflow
+            btn.classList.add('pulse-btn');
+        }
+
+        // Initialize
+        window.onload = createHearts;
+    </script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
